@@ -201,7 +201,7 @@ async def startup():
     await load_state()
     await _tg_start_bot()
     log_activity("system", "سرور راه‌اندازی شد", "ok")
-    logger.info(f"X4G v9.1 started on port {CONFIG['port']}")
+    logger.info(f"X4G v9.5 started on port {CONFIG['port']}")
 
 @app.on_event("shutdown")
 async def shutdown():
@@ -408,7 +408,7 @@ async def ensure_default_link():
 # ── Basic endpoints ───────────────────────────────────────────────────────────
 @app.get("/")
 async def root():
-    return {"service": "X4G", "version": "9.1", "status": "active", "channel": "https://t.me/Farajian2004f"}
+    return {"service": "X4G", "version": "9.5", "status": "active", "channel": "https://t.me/Farajian2004f"}
 
 @app.get("/health")
 async def health():
